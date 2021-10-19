@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  @sections = Section.all
+  def show
+    @sections = Section.all
+  end
 end

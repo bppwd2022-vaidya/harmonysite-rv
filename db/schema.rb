@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_18_174850) do
+ActiveRecord::Schema.define(version: 2021_10_18_181426) do
 
   create_table "pages", force: :cascade do |t|
     t.integer "page_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_10_18_174850) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.integer "sections_id"
+    t.integer "section_id"
     t.string "location"
     t.string "title"
     t.boolean "visible"

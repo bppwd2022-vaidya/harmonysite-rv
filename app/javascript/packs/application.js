@@ -5,6 +5,7 @@
 
 require("@popperjs/core")
 
+require("bootstrap/dist/js/bootstrap")
 import "bootstrap"
 
 // Import the specific modules you may need (Modal, Alert, etc)
