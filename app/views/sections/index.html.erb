@@ -1,0 +1,22 @@
+<table class="table">
+	<thead>
+  <tr>
+    <th scope="col">Title</th>
+    <th scope="col">Created At</th>
+    <th scope="col">Updated At</th>
+    <th scope="col">Functions</th>
+  </tr>
+</thead>
+<tbody>
+	<% @sections.each do |sec| %>
+    <td><%= sec.title %></td>
+    <td><%= sec.created_at %></td>
+    <td><%= sec.updated_at %></td>
+    <td><%= link_to "Show", section_path(sec.id) %>
+    	<%= link_to "Edit", edit_section_path(sec.id) %>
+    	<%= link_to "Destroy", section_path(sec.id), method: :delete %></td>
+  <% end %>
+  </tbody>
+  <%= link_to "New Section", new_section_path %>
+</table>
+

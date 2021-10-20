@@ -1,0 +1,39 @@
+<%= form_with model: @section do |form| %>
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_area :location %>
+    <% @section.errors.full_messages_for(:location).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_area :title %><br>
+    <% @section.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :visible %><br>
+    <%= form.text_area :visible %><br>
+    <% @section.errors.full_messages_for(:visible).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :position %><br>
+    <%= form.text_area :position %><br>
+    <% @section.errors.full_messages_for(:position).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+  <%= link_to 'Back', 'javascript:history.back()' %>
+<% end %>
