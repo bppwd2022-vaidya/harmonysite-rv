@@ -1,13 +1,24 @@
-<h1><%= @section.location %></h1>
-<p><%= @section.title %></p>
-<p><%= @section.visible %></p>
-<p><%= @section.position %></p>
+<p id="notice"><%= notice %></p>
 
-<ul>
-  <li><%= link_to "Edit", edit_section_path(@section) %></li>
-  <li><%= link_to "Destroy", section_path(@section),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-</ul>
+<p>
+  <strong>Location:</strong>
+  <%= @section.location %>
+</p>
 
-<%= link_to 'Back', 'javascript:history.back()' %>
+<p>
+  <strong>Title:</strong>
+  <%= @section.title %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @section.visible %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @section.position %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>

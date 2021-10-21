@@ -1,39 +1,39 @@
-<%= form_with model: @section do |form| %>
-  <div>
-    <%= form.label :location %><br>
+<div class="form-group border border-dark">
+<%= form_with(model: section) do |form| %>
+  <% if section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(section.errors.count, "error") %> prohibited this section from being saved:</h2>
+
+      <ul>
+        <% section.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field col-2 p-2 form-control">
+    <%= form.label :location %>
     <%= form.text_field :location %>
-    <% @section.errors.full_messages_for(:location).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
   </div>
 
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %><br>
-    <% @section.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+  <div class="field col-2 p-2 form-control">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
 
-  <div>
-    <%= form.label :visible %><br>
-    <%= form.text_field :visible %><br>
-    <% @section.errors.full_messages_for(:visible).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+  <div class="field col-2 p-2 form-control">
+    <%= form.label :visible %>
+    <%= form.check_box :visible %>
   </div>
 
-  <div>
-    <%= form.label :position %><br>
-    <%= form.text_field :position %><br>
-    <% @section.errors.full_messages_for(:position).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+  <div class="field col-2 p-2 form-control">
+    <%= form.label :position %>
+    <%= form.number_field :position %>
   </div>
 
-  <div>
+  <div class="actions pb-5">
     <%= form.submit %>
   </div>
-
-  <%= link_to 'Back', 'javascript:history.back()' %>
 <% end %>
+</div>

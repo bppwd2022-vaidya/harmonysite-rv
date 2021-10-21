@@ -1,7 +1,6 @@
 class CreateSections < ActiveRecord::Migration[6.1]
   def change
     create_table :sections do |t|
-      t.integer :section_id
       t.string :location
       t.string :title
       t.boolean :visible

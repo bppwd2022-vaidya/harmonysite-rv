@@ -1,4 +1,7 @@
-<h1>New Section</h1>
+<h1 class= "text-center">New Section</h1>
 
-<%= render "form", section: @section %>
+<%= render 'form', section: @section %>
 
+<button type="button" class= "btn btn-secondary">
+	<%= link_to 'Back', sections_path %>
+</button>
