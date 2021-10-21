@@ -9,12 +9,14 @@
 </thead>
 <tbody>
 	<% @sections.each do |sec| %>
+  <tr>
     <td><%= sec.title %></td>
     <td><%= sec.created_at %></td>
     <td><%= sec.updated_at %></td>
     <td><%= link_to "Show", section_path(sec.id) %>
     	<%= link_to "Edit", edit_section_path(sec.id) %>
     	<%= link_to "Destroy", section_path(sec.id), method: :delete %></td>
+  </tr>
   <% end %>
   </tbody>
   <%= link_to "New Section", new_section_path %>

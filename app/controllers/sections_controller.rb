@@ -12,7 +12,7 @@ class SectionsController < ApplicationController
   end
 
   def create
-     @section = Article.new(section_params)
+     @section = Section.new(section_params)
 
     if @section.save
       redirect_to @section

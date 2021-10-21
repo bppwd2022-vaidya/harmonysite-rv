@@ -1,7 +1,7 @@
 <%= form_with model: @section do |form| %>
   <div>
     <%= form.label :location %><br>
-    <%= form.text_area :location %>
+    <%= form.text_field :location %>
     <% @section.errors.full_messages_for(:location).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -9,7 +9,7 @@
 
   <div>
     <%= form.label :title %><br>
-    <%= form.text_area :title %><br>
+    <%= form.text_field :title %><br>
     <% @section.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -17,7 +17,7 @@
 
   <div>
     <%= form.label :visible %><br>
-    <%= form.text_area :visible %><br>
+    <%= form.text_field :visible %><br>
     <% @section.errors.full_messages_for(:visible).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -25,7 +25,7 @@
 
   <div>
     <%= form.label :position %><br>
-    <%= form.text_area :position %><br>
+    <%= form.text_field :position %><br>
     <% @section.errors.full_messages_for(:position).each do |message| %>
       <div><%= message %></div>
     <% end %>
