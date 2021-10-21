@@ -12,18 +12,20 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= form.label :title %>
-      <%= form.text_field :title %>
-    </div>
+    <div class="form-control">
+      <div class="field p-2 text-center">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
 
-    <div class="field">
-      <%= form.label :details %>
-      <%= form.text_area :details %>
-    </div>
+      <div class="field p-2 text-center"">
+        <%= form.label :details %>
+        <%= form.text_area :details %>
+      </div>
 
-    <div class="actions">
-      <%= form.submit %>
+      <div class="actions pt-2 text-center">
+        <%= form.submit %>
+      </div>
     </div>
   <% end %>
 </div>
