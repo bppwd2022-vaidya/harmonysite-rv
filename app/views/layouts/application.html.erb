@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'layout' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= tinymce_assets %>
+    <script type="text/javascript" src="/assets/tinymce.js"></script>
+
   </head>
 
     <body id="page-top" class = "container">
@@ -28,7 +30,12 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <% sec.pages.each do |page| %>
-                      <li><a class="dropdown-item" href="#"><%= page.title %></a></li>
+                      <% if page.page_type == "Basic Page" %>
+                        <li><%= link_to page.title, site_page_path(id: page.id), class: "dropdown-item" %></li>
+                      <% elsif page.page_type == "Internal URL"  %>
+                        <li><%= link_to page.title, page.content, class: "dropdown-item" %></li>
+                    <% end %>
+                 
                     <% end %>
                   </ul>
                 </li>
@@ -37,9 +44,6 @@
             </div>
           </div>
         </nav>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
     <div class="border border-3 p-3">
       <%= yield %>
     </div>

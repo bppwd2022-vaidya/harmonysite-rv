@@ -18,9 +18,17 @@
         <%= form.text_field :title %>
       </div>
 
-      <div class="field p-2 text-center"">
+      <div class="field p-2 text-center">
+        <%= form.label :photo %>
+        <%= form.file_field :photo %>
+      </div>
+
+
+      <div class="field p-2 text-center">
         <%= form.label :details %>
-        <%= form.text_area :details %>
+        <%= form.text_area :details, class: "tinymce"%>
+        <%= tinymce %>
+
       </div>
 
       <div class="actions pt-2 text-center">

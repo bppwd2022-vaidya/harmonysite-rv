@@ -5,9 +5,18 @@
   <%= @event.title %>
 </p>
 
+<strong>Photo:</strong>
+<% if @event.photo.attached? %>
+  <%= image_tag @event.photo, class: "smaller" %>
+<% else %>
+    <p>photo was not attached</p>
+  </div>
+<% end %>
+
+
 <p>
   <strong>Details:</strong>
-  <%= @event.details %>
+  <%= raw @event.details %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
