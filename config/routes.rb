@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'site/home'
   get 'site/events'
   get 'site/page'
+  get 'site/aboutus'
   resources :pages
   resources :sections
   devise_for :users
