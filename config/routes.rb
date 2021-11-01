@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'site/events'
   get 'site/page'
   get 'site/aboutus'
+  get 'site/photo'
+  get 'site/albums'
   resources :pages
   resources :sections
   devise_for :users

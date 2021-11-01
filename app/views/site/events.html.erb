@@ -1,0 +1,7 @@
+<h1 class="text-center">Events</h1>
+<% @events.each do |event| %>
+	<div class="border border-3 text-center">
+		<h2><%=event.title %></h2>
+		<p><%= raw event.details %></p>
+	</div>
+<% end %>

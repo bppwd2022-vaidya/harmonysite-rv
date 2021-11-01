@@ -1,0 +1,8 @@
+<h1 class="text-center">Albums</h1>
+<% @albums.each do |album| %>
+	<div class="border border-3 text-center">
+		<h2><%=album.title %></h2>
+		<p><%= link_to site_photo_path(id: photo.id) %></p>
+		<p><%= raw album.description %></p>
+	</div>
+<% end %>

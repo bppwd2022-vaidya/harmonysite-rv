@@ -8,6 +8,10 @@ class SiteController < ApplicationController
   end
 
   def events
+    @events = Event.all
+  end
 
+  def photos
+    @photo = Photo.find(params[:id])
   end
 end

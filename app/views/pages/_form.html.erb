@@ -43,8 +43,14 @@
   </div>
 
   <div class="field p-2 text-center">
+    <%= form.label :destination %>
+    <%= form.text_field :destination %>
+  </div>
+
+  <div class="field p-2 text-center">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, class: "tinymce"%>
+    <%= tinymce %>
   </div>
 
   <div class="actions text-center">
