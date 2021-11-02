@@ -11,7 +11,12 @@ class SiteController < ApplicationController
     @events = Event.all
   end
 
-  def photos
-    @photo = Photo.find(params[:id])
+  def photo
+   # @photo = Photo.find(params[:id])
+    @albums = Album.all
+  end
+
+  def albums
+    @albums = Album.all
   end
 end
