@@ -12,8 +12,9 @@ class SiteController < ApplicationController
   end
 
   def photo
-   # @photo = Photo.find(params[:id])
+    @photo = Photo.find(params[:id])
     @albums = Album.all
+    @album = Album.find(params[:id])
   end
 
   def albums
